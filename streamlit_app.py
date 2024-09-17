@@ -1,9 +1,15 @@
 import streamlit as st
 from PIL import Image
 
-#MainMenu {
-  visibility: hidden;
-}
+st.header("Ahoy!")
+hide_st_style="""
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+</style>
+"""
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 # Load the image (replace 'image.jpg' with your file path)
 img = Image.open('Banner.jpg')
