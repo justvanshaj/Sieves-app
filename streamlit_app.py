@@ -24,13 +24,13 @@ if x > 0:
     z8 = (y8 * 100) / x + z7
 
     # Display the results
-    st.write(f"60#  : {z1:.2f}%")
-    st.write(f"100# : {z2:.2f}%")
-    st.write(f"150# : {z3:.2f}%")
-    st.write(f"200# : {z4:.2f}%")
-    st.write(f"240# : {z5:.2f}%")
-    st.write(f"300# : {z6:.2f}%")
-    st.write(f"350# : {z7:.2f}%")
-    st.write(f"Base : {z8:.2f}%")
+    st.write(f"60#  : {z1:.4f}%")
+    st.write(f"100# : {z2:.4f}%")
+    st.write(f"150# : {z3:.4f}%")
+    st.write(f"200# : {z4:.4f}%")
+    st.write(f"240# : {z5:.4f}%")
+    st.write(f"300# : {z6:.4f}%")
+    st.write(f"350# : {z7:.4f}%")
+    st.write(f"Base : {z8:.4f}%")
 else:
     st.write("Please enter a sample greater than 0.")
