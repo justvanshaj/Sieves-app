@@ -3,14 +3,14 @@ import streamlit as st
 x = st.number_input("Enter Sample:", min_value=1, step=1)
 
 # Inputs for each weight
-y1 = st.number_input("Enter 60#:", min_value=0.0, step=0.001)
-y2 = st.number_input("Enter 100#:", min_value=0.0, step=0.001)
-y3 = st.number_input("Enter 150#:", min_value=0.0, step=0.001)
-y4 = st.number_input("Enter 200#:", min_value=0.0, step=0.001)
-y5 = st.number_input("Enter 240#:", min_value=0.0, step=0.001)
-y6 = st.number_input("Enter 300#:", min_value=0.0, step=0.001)
-y7 = st.number_input("Enter 350#:", min_value=0.0, step=0.001)
-y8 = st.number_input("Enter Base:", min_value=0.0, step=0.001)
+y1 = st.number_input("Enter 60#:", min_value=0.000, step=0.001,format="%.3f")
+y2 = st.number_input("Enter 100#:", min_value=0.000, step=0.001,format="%.3f")
+y3 = st.number_input("Enter 150#:", min_value=0.000, step=0.001,format="%.3f")
+y4 = st.number_input("Enter 200#:", min_value=0.000, step=0.001,format="%.3f")
+y5 = st.number_input("Enter 240#:", min_value=0.000, step=0.001,format="%.3f")
+y6 = st.number_input("Enter 300#:", min_value=0.000, step=0.001,format="%.3f")
+y7 = st.number_input("Enter 350#:", min_value=0.000, step=0.001,format="%.3f")
+y8 = st.number_input("Enter Base:", min_value=0.000, step=0.001,format="%.3f")
 
 # Perform the calculations
 if x > 0:
