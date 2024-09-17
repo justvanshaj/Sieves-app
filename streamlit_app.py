@@ -1,12 +1,19 @@
 import streamlit as st
-
 from PIL import Image
+
+# Add custom CSS to hide the GitHub icon
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 # Load the image (replace 'image.jpg' with your file path)
 img = Image.open('Banner.jpg')
 
 # Display the image
-st.image(img, caption='Sample Image', use_column_width=True)
+st.image(img, caption='Sieve Shaker Formula', use_column_width=True)
 
 # Input for sample
 x = st.number_input("Enter Sample:", min_value=1, step=1)
