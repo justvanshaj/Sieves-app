@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 
-st.header("Ahoy!")
+st.header("Aravally Sieve Shaker Calculator")
 hide_st_style="""
 <style>
 #MainMenu {visibility: hidden;}
@@ -15,7 +15,7 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 img = Image.open('Banner.jpg')
 
 # Display the image
-st.image(img, caption='Sieve Shaker Formula', use_column_width=True)
+st.image(img, caption='', use_column_width=True)
 
 # Input for sample
 x = st.number_input("Enter Sample:", min_value=1, step=1)
