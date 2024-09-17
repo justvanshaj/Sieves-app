@@ -1,4 +1,8 @@
 import streamlit as st
+
+st.image("./Banner.png", width=800)
+st.write("")
+
 # Input for sample
 x = st.number_input("Enter Sample:", min_value=1, step=1)
 
