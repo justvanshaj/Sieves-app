@@ -1,13 +1,9 @@
 import streamlit as st
 from PIL import Image
 
-# Add custom CSS to hide the GitHub icon
-hide_github_icon = """
-#GithubIcon {
+#MainMenu {
   visibility: hidden;
 }
-
-st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 # Load the image (replace 'image.jpg' with your file path)
 img = Image.open('Banner.jpg')
