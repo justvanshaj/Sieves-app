@@ -1,6 +1,12 @@
 import streamlit as st
 
-st.image("./Banner.png", width=800)
+from PIL import Image
+
+# Load the image (replace 'image.jpg' with your file path)
+img = Image.open('Banner.jpg')
+
+# Display the image
+st.image(img, caption='Sample Image', use_column_width=True)
 
 # Input for sample
 x = st.number_input("Enter Sample:", min_value=1, step=1)
