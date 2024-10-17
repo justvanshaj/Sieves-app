@@ -2,10 +2,10 @@ import streamlit as st
 from PIL import Image
 # Set the page configuration (title and favicon)
 st.set_page_config(
-    page_title="Aravally Sieve Shaker Calculator",  # Page title
+    page_title="Aravally Sieve Shaker",  # Page title
     page_icon="sieve.ico"  # Path to your favicon file
 )
-st.header("Aravally Sieve Shaker Calculator")
+st.header("Sieve Shaker Calculator")
 hide_st_style="""
 <style>
 #MainMenu {visibility: hidden;}
