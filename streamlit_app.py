@@ -16,7 +16,7 @@ header {visibility: hidden;}
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 # Load the image (replace 'image.jpg' with your file path)
-img = Image.open('Banner.jpg')
+img = Image.open('Banner.png')
 
 # Display the image
 st.image(img, caption='', use_column_width=True)
