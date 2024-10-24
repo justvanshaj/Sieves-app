@@ -9,6 +9,14 @@ st.set_page_config(
     page_icon="favicon.ico"
 )
 
+# Inject JavaScript to modify the title
+title_js = """
+<script>
+document.title = "Aravally App Store";
+</script>
+"""
+st.markdown(title_js, unsafe_allow_html=True)
+
 # Hide Streamlit's default UI components
 hide_st_style = """
 <style>
