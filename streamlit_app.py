@@ -21,8 +21,8 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 # Load images for the welcome screen icons
 banner_img = Image.open('Banner.png')
-sieve_icon = Image.open('sieve_icon.png')  # Placeholder for Sieve Shaker icon
-dal_icon = Image.open('dal_icon.png')      # Placeholder for Dal Split icon
+sieve_icon = Image.open('sieve_icon.ico')  # Placeholder for Sieve Shaker icon
+dal_icon = Image.open('dal_icon.ico')      # Placeholder for Dal Split icon
 
 # Define session state to manage navigation between screens
 if 'screen' not in st.session_state:
