@@ -42,39 +42,46 @@ def load_image(image_path):
         st.warning(f"Image '{image_path}' not found.")
         return None
 
-# Define session state to manage navigation
+# Load banner image
+banner_img = load_image('Banner.png')
+
+# Center banner and header using CSS
+center_style = """
+<style>
+.center-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 20px;
+}
+</style>
+<div class="center-top">
+"""
+
+# Home Screen Layout
 if 'screen' not in st.session_state:
     st.session_state.screen = 'home'
 
-# Function to center the content using CSS
-def center_content():
-    st.markdown(
-        """
-        <style>
-        .centered {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        </style>
-        <div class="centered">
-        """,
-        unsafe_allow_html=True
-    )
+def navigate_to(screen):
+    st.session_state.screen = screen
 
-# Home Screen
 if st.session_state.screen == 'home':
-    center_content()  # Apply CSS for centering
+    st.markdown(center_style, unsafe_allow_html=True)  # Apply centering CSS
     if banner_img:
         st.image(banner_img, caption='', width=150)
-
     st.header("Welcome to Aravally App Store")
+    st.markdown("</div>", unsafe_allow_html=True)  # Close div
 
-    # End the centered div
-    st.markdown("</div>", unsafe_allow_html=True)
-# trial ends
+    # Navigation buttons
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("Sieve Shaker Calculator"):
+            navigate_to('sieve')
+    with col2:
+        if st.button("Dal Split Calculator"):
+            navigate_to('dal')# trial ends
 
 # Define session state to manage navigation between screens
 if 'screen' not in st.session_state:
