@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 from fpdf import FPDF
 import base64
+import os
 
 # Set the page configuration (title and favicon)
 st.set_page_config(
@@ -31,6 +32,49 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 banner_img = Image.open('Banner2.png')
 sieve_icon = Image.open('sieve_icon.ico')  # Placeholder for Sieve Shaker icon
 dal_icon = Image.open('dal_icon.ico')      # Placeholder for Dal Split icon
+
+# trial starts
+# Helper function to safely load images
+def load_image(image_path):
+    if os.path.exists(image_path):
+        return Image.open(image_path)
+    else:
+        st.warning(f"Image '{image_path}' not found.")
+        return None
+
+# Define session state to manage navigation
+if 'screen' not in st.session_state:
+    st.session_state.screen = 'home'
+
+# Function to center the content using CSS
+def center_content():
+    st.markdown(
+        """
+        <style>
+        .centered {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        </style>
+        <div class="centered">
+        """,
+        unsafe_allow_html=True
+    )
+
+# Home Screen
+if st.session_state.screen == 'home':
+    center_content()  # Apply CSS for centering
+    if banner_img:
+        st.image(banner_img, caption='', width=150)
+
+    st.header("Welcome to Aravally App Store")
+
+    # End the centered div
+    st.markdown("</div>", unsafe_allow_html=True)
+# trial ends
 
 # Define session state to manage navigation between screens
 if 'screen' not in st.session_state:
