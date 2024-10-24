@@ -34,55 +34,6 @@ sieve_icon = Image.open('sieve_icon.ico')  # Placeholder for Sieve Shaker icon
 dal_icon = Image.open('dal_icon.ico')      # Placeholder for Dal Split icon
 
 # trial starts
-# Helper function to safely load images
-def load_image(image_path):
-    if os.path.exists(image_path):
-        return Image.open(image_path)
-    else:
-        st.warning(f"Image '{image_path}' not found.")
-        return None
-
-# Load banner image
-banner_img = load_image('Banner.png')
-
-# Center banner and header using CSS
-center_style = """
-<style>
-.center-top {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 100vh;
-    margin-top: 20px;
-}
-</style>
-<div class="center-top">
-"""
-
-# Home Screen Layout
-if 'screen' not in st.session_state:
-    st.session_state.screen = 'home'
-
-def navigate_to(screen):
-    st.session_state.screen = screen
-
-if st.session_state.screen == 'home':
-    st.markdown(center_style, unsafe_allow_html=True)  # Apply centering CSS
-    if banner_img:
-        st.image(banner_img, caption='', width=150)
-    st.header("Welcome to Aravally App Store")
-    st.markdown("</div>", unsafe_allow_html=True)  # Close div
-
-    # Navigation buttons
-    col1, col2 = st.columns(2)
-    with col1:
-        if st.button("Sieve Shaker Calculator"):
-            navigate_to('sieve')
-    with col2:
-        if st.button("Dal Split Calculator"):
-            navigate_to('dal')# trial ends
-
 # Define session state to manage navigation between screens
 if 'screen' not in st.session_state:
     st.session_state.screen = 'home'
