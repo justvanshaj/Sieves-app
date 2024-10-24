@@ -53,13 +53,13 @@ if st.session_state.screen == 'home':
         if st.button("Sieve Shaker Calculator"):
             navigate_to('sieve')
 
-        st.image(sieve_icon, caption='Sieve Shaker', width=120)
+        st.image(sieve_icon, caption='', width=120)
 
     with col2:
         if st.button("Dal Split Calculator"):
             navigate_to('dal')
 
-        st.image(dal_icon, caption='Dal Split', width=120)
+        st.image(dal_icon, caption='', width=120)
 
 # Sieve Shaker Calculator Screen
 if st.session_state.screen == 'sieve':
