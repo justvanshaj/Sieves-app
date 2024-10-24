@@ -28,7 +28,7 @@ header {visibility: hidden;}
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 # Load images for the welcome screen icons
-banner_img = Image.open('Banner.png')
+banner_img = Image.open('Banner2.png')
 sieve_icon = Image.open('sieve_icon.ico')  # Placeholder for Sieve Shaker icon
 dal_icon = Image.open('dal_icon.ico')      # Placeholder for Dal Split icon
 
