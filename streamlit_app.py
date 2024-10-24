@@ -34,7 +34,7 @@ def navigate_to(screen):
 
 # Home Screen: Displays icons for navigation
 if st.session_state.screen == 'home':
-    st.image(banner_img, caption='', width=150)
+    st.image(banner_img, caption='', width=200)
     st.header("Welcome to Aravally App Store")
 
     col1, col2 = st.columns(2)
